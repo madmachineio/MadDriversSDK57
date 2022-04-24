@@ -6,11 +6,11 @@ The sensor will output changing voltages by setting the raw value. Therefore, th
 
 * [SwiftIO](https://github.com/madmachineio/SwiftIO)
 * [MadBoard](https://github.com/madmachineio/MadBoards)
-* [MCP4725](https://github.com/madmachineio/MadDrivers/tree/main/Sources/MCP4725/MCP4725.swift)
+* [MCP4725](https://github.com/madmachineio/MadDriversSDK57/tree/main/Sources/MCP4725/MCP4725.swift)
 
 
 ## How to use
 
-1. Download the MadDrivers folder.
+1. Download the MadDriversSDK57 folder.
 2. Open one of the examples in Visual Studio Code. If you are not familiar with the operation, you could refer to [this tutorial](https://docs.madmachine.io/how-to/open-project).
 3. Build and download the code to your board. [Here](https://docs.madmachine.io/overview/run-your-first-project) is a detailed guide to get started.

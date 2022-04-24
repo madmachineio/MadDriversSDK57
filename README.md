@@ -1,12 +1,12 @@
-# MadDrivers
+# MadDriversSDK57
 
-![build](https://github.com/madmachineio/MadDrivers/actions/workflows/build.yml/badge.svg)
-![test](https://github.com/madmachineio/MadDrivers/actions/workflows/host_test.yml/badge.svg)
-[![codecov](https://codecov.io/gh/madmachineio/MadDrivers/branch/main/graph/badge.svg?token=PHBKJXWHPN)](https://codecov.io/gh/madmachineio/MadDrivers)
+![build](https://github.com/madmachineio/MadDriversSDK57/actions/workflows/build.yml/badge.svg)
+![test](https://github.com/madmachineio/MadDriversSDK57/actions/workflows/host_test.yml/badge.svg)
+[![codecov](https://codecov.io/gh/madmachineio/MadDriversSDK57/branch/main/graph/badge.svg?token=PHBKJXWHPN)](https://codecov.io/gh/madmachineio/MadDriversSDK57)
 [![Discord](https://img.shields.io/discord/592743353049808899?&logo=Discord&colorB=7289da)](https://madmachine.io/discord)
 [![twitter](https://img.shields.io/twitter/follow/madmachineio?label=%40madmachineio&style=social)](https://twitter.com/madmachineio)
 
-This `MadDrivers` library, based on `SwiftIO`, provides an easy way to use all kinds of devices with your boards. You could directly use the related class to read or write data and don't need to understand the communication details.
+This `MadDriversSDK57` library, based on `SwiftIO`, provides an easy way to use all kinds of devices with your boards. You could directly use the related class to read or write data and don't need to understand the communication details.
 
 Note: This library aims to allow you to program the devices easily, so some uncommon errors or rare situations aren't be considered. The `SwiftIO` library can give the messages about the communication and which error occurs if it fails. If you need more detailed results about the device status to ensure security, you can download and modify the code according to your need.
 
@@ -153,11 +153,11 @@ Take the library `SHT3x` for example:
 
 2. Open the project and open the file `Package.swift`. 
 
-    The `MadDrivers` has already been added to your project by default. You could use all libraries in it. It's better to **specify the specific library** to reduce the build time for your project. Change the statement
+    The `MadDriversSDK57` has already been added to your project by default. You could use all libraries in it. It's better to **specify the specific library** to reduce the build time for your project. Change the statement
     
-    `.product(name: "MadDrivers", package: "MadDrivers")` to
+    `.product(name: "MadDriversSDK57", package: "MadDriversSDK57")` to
     
-    `.product(name: "SHT3x", package: "MadDrivers")` as shown below.
+    `.product(name: "SHT3x", package: "MadDriversSDK57")` as shown below.
 
 ```swift
 // swift-tools-version:5.3
@@ -169,7 +169,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/madmachineio/SwiftIO.git", .upToNextMinor(from: "0.0.1")),
         .package(url: "https://github.com/madmachineio/MadBoards.git", .upToNextMinor(from: "0.0.1")),
-        .package(url: "https://github.com/madmachineio/MadDrivers.git", .upToNextMinor(from: "0.0.1")),
+        .package(url: "https://github.com/madmachineio/MadDriversSDK57.git", .upToNextMinor(from: "0.0.1")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -180,7 +180,7 @@ let package = Package(
                 "SwiftIO",
                 "MadBoards",
                 // use specific library would speed up the compile procedure
-                .product(name: "SHT3x", package: "MadDrivers")
+                .product(name: "SHT3x", package: "MadDriversSDK57")
             ]),
         .testTarget(
             name: "sht3xTests",
@@ -211,7 +211,7 @@ while true {
 
 ## Try examples
 
-At first, you could try demo projects in the folder [Examples](https://github.com/madmachineio/MadDrivers/tree/main/Examples).
+At first, you could try demo projects in the folder [Examples](https://github.com/madmachineio/MadDriversSDK57/tree/main/Examples).
 
 In the Examples folder, there are folders for different devices. Each folder may have one or several projects to help you get started with each device.
 

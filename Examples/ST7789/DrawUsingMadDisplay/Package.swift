@@ -7,7 +7,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/madmachineio/SwiftIO.git", .branch("main")),
         .package(url: "https://github.com/madmachineio/MadBoards.git", .branch("main")),
-        .package(url: "https://github.com/madmachineio/MadDrivers.git", .branch("main")),
+        .package(url: "https://github.com/madmachineio/MadDriversSDK57.git", .branch("main")),
         .package(url: "https://github.com/madmachineio/MadDisplay.git", .branch("main")),
     ],
     targets: [
@@ -20,7 +20,7 @@ let package = Package(
                 "MadBoards",
                 "MadDisplay",
                 // use specific library would speed up the compile procedure
-                .product(name: "ST7789", package: "MadDrivers")
+                .product(name: "ST7789", package: "MadDriversSDK57")
             ]),
         .testTarget(
             name: "DrawUsingMadDisplayTests",
